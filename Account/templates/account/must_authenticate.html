@@ -1,0 +1,41 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+		<section class="pt-100 pb-100 bg-primary text-center call_to_action_2">
+			<div class="container px-xl-0">
+				<div class="px-110 pt-50 pb-50 bg-secondary radius10 inner">
+			<p class="m-auto" style="color:white">Must Authenticate to view this page.</p>
+   
+						<a href="{% url 'login' %}" class="mx-15 link color-main">
+						
+                				<span>
+Login
+					</span>
+					
+							
+					</a>
+         
+<a href="{% url 'register' %}" class="mx-15 link color-main">
+						
+                				<span>
+Register
+					</span>
+					
+							
+					</a>
+
+        
+
+
+					</div>
+				</div>
+			
+     
+		</section>
+
+{% endblock content %}
+
+		
+
+
+		
