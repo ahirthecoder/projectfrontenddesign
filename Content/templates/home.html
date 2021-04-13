@@ -3,18 +3,39 @@
 
 
 		{% block content %}
-	<section class="pt-100 pb-100 bg-primary text-center call_to_action_2">
-			<div class="container px-xl-0">
-				<div class="px-110 pt-80 pb-80 radius10 inner">
-					<h2 class="mb-40 small" data-aos="zoom-in" data-aos-delay="0">
-						Webmeta data retrival
+<style>
+#inputEmail {
+  width:250px;
+  transition: 0.5s;
+  margin-bottom:30px;
+  margin-left:75px;
+}
+
+#inputEmail:focus {
+	width:450px;
+  transition: 0.5s;
+}
+</style>
+
+	<section class="pt-100 pb-10 text-center justify-content-center align-items-center  call_to_action_2" style="background-color:"#121212"">
+		
+			
+					<h2 class="mb-40 small " data-aos="zoom-in" data-aos-delay="0">
+						Open Source API for Web Metadata Retrival 
 					</h2>
 					<div data-aos="zoom-in" data-aos-delay="250">
-						<a href="#" class="btn lg action-3">
-							Get started
+					{% if request.user.is_authenticated %}
+						<a href="{% url 'doc' %}" class="btn md action-1 ml-75">
+							Read docs
 						</a>
-					</div>
-				</div>
+						{% else %}
+						<a href="{% url 'register' %}" class="btn md action-3 ml-75">
+							Get Started
+						</a>
+
+						 {% endif %}
+				
 			</div>
 		</section>
+		
 		{% endblock content %}

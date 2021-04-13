@@ -24,21 +24,21 @@
 </head>
 
 <body>
-<section class="pt-120 pb-120 bg-primary form_1">
+<section class="pt-120 pb-120 form_1" style="background-color:"#121212"">
 		<div class="container px-xl-0">
 
-<form  class="bg-secondary mx-auto mw-430 radius10 pt-40 px-50 pb-30" method="post">{% csrf_token %}
+<form  class="bg-gray mx-auto mw-430 radius10 pt-40 px-50 pb-30" method="post">{% csrf_token %}
 
  	<h2 class="mb-20 small text-center color-heading" style="color:black">
 					Register for an API key
 				</h2>
 
 
-  <input type="email" id="inputEmail" name="email" class="input border-gray focus-action-1 color-heading placeholder-heading w-full" required autofocus placeholder="Email address">
+  <input type="email" id="inputEmail" name="email" class="input border-dark focus-action-1 color-heading placeholder-heading w-full" required autofocus placeholder="Email address">
 
-  <input type="password" id="inputPassword1" name="password1" class="input border-gray focus-action-1 color-heading placeholder-heading w-full mt-10" placeholder="Password" required>
+  <input type="password" id="inputPassword1" name="password1" class="input border-dark focus-action-1 color-heading placeholder-heading w-full mt-10" placeholder="Password" required>
 
-  <input type="password" id="inputPassword2" name="password2" class="input border-gray focus-action-1 color-heading placeholder-heading w-full mt-10"  placeholder="Confirm Password" required>
+  <input type="password" id="inputPassword2" name="password2" class="input border-dark focus-action-1 color-heading placeholder-heading w-full mt-10"  placeholder="Confirm Password" required>
 
     {% for field in registration_form %}
 
@@ -62,7 +62,7 @@
 					<span>
 						Do you have an Account? 
 					</span>
-					<a href="{% url 'login' %}" class="link" style="color:white">
+					<a href="{% url 'login' %}" class="link" style="background-color:"#121212"">
 						Login
 					</a>
 				</div>
