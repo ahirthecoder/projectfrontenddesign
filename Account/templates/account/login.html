@@ -31,11 +31,11 @@
 
 </head>
 
-<body>
-<section class="pt-120 pb-120 form_1" style="background-color:"#121212"">
+<body style="height:100vh;margin:0">
+<section class="form_1 " style="background-color:"#121212"">
 		<div class="container px-xl-0">
 
-<form  class="bg-gray mx-auto mw-430 radius10 pt-40 px-50 pb-30" method="post">{% csrf_token %}
+<form  class="bg-gray mx-auto mw-430 radius10 pt-40 px-50 mt-1 pb-30" method="post">{% csrf_token %}
 
  	<h2 class="mb-20 small text-center color-heading" style="color:black">
 					Login
@@ -45,7 +45,7 @@
   <input type="email" id="inputEmail" name="email" class="input border-dark focus-action-1 color-heading placeholder-heading w-full" required autofocus placeholder="Email address">
 
   <input type="password" id="inputPassword" name="password" class="input border-dark focus-action-1 color-heading placeholder-heading w-full mt-10"  placeholder="Password" required>
-
+  <input type="checkbox" class="pt-80 mr-5 mt-1" onclick="myFunction()">Show Password
  {% for field in login_form %}
 
         {% for error in field.errors %}
@@ -61,11 +61,11 @@
         </div>
 
     {% endif %}
- <button class="btn mt-25 action-2 w-full " type="submit" style="margin: 10% auto 15% auto;">Login</button>
+ <button class="btn mt-15 action-2 w-full " type="submit" style="margin: 10% auto 15% auto;">Login</button>
 
-  
+
  
-	<div class="mt-25 f-18 medium color-dark text-center">
+	<div class="mt-12 f-18 medium color-dark text-center">
 					<span>
 						Don't have an Account? 
 					</span>
@@ -75,7 +75,7 @@
          
 				</div>
 
-        	<div class="mt-25 f-18 medium color-dark text-center">
+        	<div class=" f-18 medium color-dark text-center">
 	
 						<a href="{% url 'home' %}" class="mx-15 link color-main">
 						<i class="fas fa-arrow-circle-left"></i>
@@ -93,7 +93,7 @@ Go back to Home
 </form>
 
 </div>
-		<div class="mt-25 f-18 medium color-dark text-center">
+		<div class="f-18 medium color-dark text-center">
 	
 						<a href="/password-reset" class="mx-15 link color-main">
 						
@@ -109,7 +109,16 @@ Forget password?
 
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 		
-
+<script>
+function myFunction() {
+  var x = document.getElementById("inputPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 	
 
 	

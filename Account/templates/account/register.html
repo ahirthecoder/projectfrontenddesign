@@ -24,12 +24,12 @@
 </head>
 
 <body>
-<section class="pt-120 pb-120 form_1" style="background-color:"#121212"">
+<section class=" form_1" style="background-color:"#121212"">
 		<div class="container px-xl-0">
 
-<form  class="bg-gray mx-auto mw-430 radius10 pt-40 px-50 pb-30" method="post">{% csrf_token %}
+<form  class="bg-gray mx-auto mw-430 radius10 mt-1 pt-1 px-50 pb-10" method="post">{% csrf_token %}
 
- 	<h2 class="mb-20 small text-center color-heading" style="color:black">
+ 	<h2 class="mb-15 small text-center color-heading" style="color:black">
 					Register for an API key
 				</h2>
 
@@ -39,6 +39,8 @@
   <input type="password" id="inputPassword1" name="password1" class="input border-dark focus-action-1 color-heading placeholder-heading w-full mt-10" placeholder="Password" required>
 
   <input type="password" id="inputPassword2" name="password2" class="input border-dark focus-action-1 color-heading placeholder-heading w-full mt-10"  placeholder="Confirm Password" required>
+
+  <input type="checkbox" class="pt-80 mr-5 mt-1" onclick="myFunction()">Show Password
 
     {% for field in registration_form %}
 
@@ -56,9 +58,9 @@
 
     {% endif %}
   
-  <button class="btn mt-25 action-2 w-full" type="submit" style="margin: 10% auto 15% auto;">Create an Account</button>
+  <button class="btn mt-15 action-2 w-full" type="submit" style="margin: 10% auto 15% auto;">Create an Account</button>
 
-	<div class="mt-25 f-18 medium color-dark text-center">
+	<div class=" f-18 medium color-dark text-center">
 					<span>
 						Do you have an Account? 
 					</span>
@@ -67,7 +69,7 @@
 					</a>
 				</div>
 
-				    	<div class="mt-25 f-18 medium color-dark text-center">
+				    	<div class=" f-18 medium color-dark text-center">
 	
 						<a href="{% url 'home' %}" class="mx-15 link color-main">
 							<i class="fas fa-arrow-circle-left"></i>
@@ -88,7 +90,20 @@
 
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 		
-	
+<script>
+function myFunction() {
+     const fields = [inputPassword1, inputPassword2]
+
+    fields.forEach( x => {
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    });
+   
+}
+</script>	
 	
 	
 </body>
