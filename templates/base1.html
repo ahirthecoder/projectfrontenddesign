@@ -7,6 +7,10 @@
 		<title>Project</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	
+
+
 		<link rel="icon" href="{% static 'content/i/favicon.png' %}" type="image/x-icon">
 		
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,7 +29,7 @@
 		
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	</head> 
-	<body>
+	<body onload="myLoaderFunction()">
 	
 <!-- Navbar -->
 	<nav class="pt-30 pb-30 lh-40 navigation_2" style="background-color:"#121212"">
@@ -74,7 +78,8 @@
 						</a>
 							<a href="{% url 'account' %}" style="color:red;font-weight:600" class="btn mx-15 sm  f-16 ">
 							<i class="far fa-user-circle" style="height:50px"></i>
-						</a>
+
+								</a>
 						{% else %}
 						<a href="{% url 'login' %}" style="color:black;font-weight:600" class="link mx-15 color-main f-20">
 							Login
@@ -133,7 +138,8 @@
 				</div>
 			</footer>
 	
-		
+	
+
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 		
 		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

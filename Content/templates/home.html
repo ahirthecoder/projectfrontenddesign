@@ -3,18 +3,7 @@
 
 
 		{% block content %}
-<style>
-#inputEmail {
-  width:250px;
-  transition: 0.5s;
-  margin-bottom:30px;
-  margin-left:75px;
-}
 
-#inputEmail:focus {
-	width:450px;
-  transition: 0.5s;
-}
 </style>
 
 	<section class="pt-100 mb-120 text-center justify-content-center align-items-center  call_to_action_2" style="background-color:"#121212"">
@@ -25,11 +14,11 @@
 					</h2>
 					<div data-aos="zoom-in" data-aos-delay="250">
 					{% if request.user.is_authenticated %}
-						<a href="{% url 'doc' %}" class="btn md action-1 ml-75">
+						<a href="{% url 'doc' %}" class="btn md action-1 ">
 							Read docs
 						</a>
 						{% else %}
-						<a href="{% url 'register' %}" class="btn md action-3 ml-75">
+						<a href="{% url 'register' %}" class="btn md action-3 ">
 							Get Started
 						</a>
 
